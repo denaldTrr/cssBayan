@@ -1,0 +1,53 @@
+body{
+    background-color: #FFFACD;
+}
+
+.container {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.container .acor-body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 0;
+    line-height: 18px;
+    box-sizing: border-box;
+    transition: color 0.5s, padding 0.5s;
+    overflow: hidden;
+    font-size: 16px;
+}
+.container .acor-body p {
+    margin: 0 0 10px;
+}
+.container label {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFACD;
+    cursor: pointer;
+    padding: 20px 0px;
+    font-size: 18px;
+    margin: 0 0 5px;
+    transition: color .35s;
+    font-weight: bold;
+}
+.container label:hover {
+    color: blue;
+}
+.container input{
+    display: none;
+}
+.container label::after {
+    content: '+';
+}
+
+.container input:checked + label::after{
+    content: '-';
+}
+
+.container input:checked + label + .acor-body {
+    height: auto;
+    margin-top: -5px;
+    padding: 20px 30px 10px;
+}
